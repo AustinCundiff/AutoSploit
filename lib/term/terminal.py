@@ -494,12 +494,12 @@ class AutoSploitTerminal(object):
                             if len(choice_data_list) < 4:
                                 lib.output.error(
                                     "must provide at least LHOST, LPORT, workspace name with `{}` keyword "
-                                    "(IE {} 127.0.0.1 9076 default [whitelist-path] [honeycheck])".format(
+                                    "(IE {} default 192.168.1.1 9076 [whitelist-path] [honeycheck])".format(
                                         choice, choice
                                     )
                                 )
                             else:
-                                if lib.settings.validate_ip_addr(choice_data_list[1], home_ok=True):
+                                if lib.settings.validate_ip_addr(choice_data_list[2], home_ok=True):
                                     try:
                                         workspace = (
                                             choice_data_list[1], choice_data_list[2],

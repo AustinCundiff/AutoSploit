@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from autosploit.main import main
 from lib.output import error
 
